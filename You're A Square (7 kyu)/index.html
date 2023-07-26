@@ -3,23 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/pico-1.5.9/css/pico.min.css" />
+    <link rel="stylesheet" href="/styles/pico-1.5.9/css/pico.min.css" />
+    <link rel="stylesheet" href="/styles/desertCodeStyle.css">
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
-    <title>Document</title>
+    <title>You're a Square!</title>
   </head>
   <style>
-    div {
-      border: 1px solid black;
-    }
+
   </style>
   <body>
+    <main class="container">
+      <hgroup>
+        <h1>You're a square!</h1>
+        <h3>7kyu Kata from <a href="https://www.codewars.com/kata/54c27a33fb7da0db0100040e">Codewars</a></h3>
+      </hgroup>
+
     <h3>A square of squares</h3>
     <p>
       You like building blocks. You especially like building blocks that are
       squares. And what you even like more, is to arrange them into a square of
       square building blocks!
-      <br />
+      <br /> <br />
       However, sometimes, you can't arrange them into a square. Instead, you end
       up with an ordinary rectangle! Those blasted things! If you just had a way
       to know, whether you're currently working in vain… Wait! That's it! You
@@ -38,29 +43,33 @@
       The tests will always use some integral number, so don't worry about that
       in dynamic typed languages.
     </p>
-    <h3>Solution:</h3>
-    <pre class="prettyprint lang-html">
+    <div class="grid">
+      <div>
+      <h3>Solution:</h3>
+      <pre class="prettyprint lang-js">
 
-      const output = document.getElementById('output')
-
-        var isSquare = function(n){
-            if(n===0){
-              return true;
-            }
-              if(n>0){
-                let sr = Math.sqrt(n)
-                let sqMult = sr*sr
-                if(n%sr === 0){
-                  return true
-                }
-          
+          var isSquare = function(n){
+              if(n===0){
+                return true;
               }
-              return false; // fix me
-            }
+                if(n>0){
+                  let sr = Math.sqrt(n)
+                  let sqMult = sr*sr
+                  if(n%sr === 0){
+                    return true
+                  }
+            
+                }
+                return false; // fix me
+              }
 
-    </pre>
-    <h3>Output</h3>
-    <div id="output"></div>
+      </pre>
+    </div>
+    <div>
+      <h3>Output</h3>
+      <div id="output"></div>
+    </div>
+  </main>
 
     <script src="script.js"></script>
   </body>

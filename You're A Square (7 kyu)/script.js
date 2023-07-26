@@ -15,9 +15,9 @@ var isSquare = function (n) {
 };
 
 //test
-for (i = -2; i < 20; i++) {
+for (i = 0; i < 7; i++) {
   p = document.createElement('p');
-  p.innerHTML = `${i}: isSquare? ${isSquare(i)}`;
+  p.innerHTML = `${(Math.random() * 100).toFixed(0)}: isSquare? ${isSquare(i)}`;
   output.appendChild(p);
   p ='';
 }
